@@ -57,3 +57,45 @@ Daily Git Workflow:
 13. master/main update
       ↓
 14. Local branch pull
+
+# 1. Clone
+git clone <repository-url>
+cd <project-folder>
+
+# 2. Latest main
+git checkout main
+git pull origin main
+
+# 3. Feature branch
+git checkout -b feature/login-page
+
+# 4. Code karo...
+
+# 5. Check
+git status
+
+# 6. Stage
+git add .
+
+# 7. Commit
+git commit -m "Add login page"
+
+# 8. Push
+git push -u origin feature/login-page
+
+# 9. GitHub/GitLab par PR create karo
+# feature/login-page -> main
+
+# 10. Review ke changes
+git add .
+git commit -m "Fix review comments"
+git push
+
+# 11. PR merge hone ke baad
+git checkout main
+git pull origin main
+
+# 12. Feature branch ko latest main dena ho
+git checkout feature/login-page
+git fetch origin
+git merge origin/main
